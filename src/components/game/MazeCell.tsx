@@ -109,7 +109,7 @@ export function MazeCell({
         </div>
       )}
 
-      {/* Player - Man with clipboard */}
+      {/* Player - Boogeyman */}
       {isPlayer && (
         <div 
           className="absolute inset-0 flex items-center justify-center z-20"
@@ -120,7 +120,7 @@ export function MazeCell({
               filter: 'drop-shadow(0 0 6px hsl(35 90% 55%))'
             }}
           >
-            🧑‍💼
+            👹
           </div>
         </div>
       )}

@@ -48,7 +48,7 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
 
       <div className="relative z-10 text-center">
         {/* Title */}
-        <div className="mb-4 text-7xl animate-bounce-soft">🧑‍💼</div>
+        <div className="mb-4 text-7xl animate-bounce-soft">👹</div>
         <h1 
           className="text-4xl md:text-5xl mb-2 text-primary tracking-wider"
           style={{
@@ -58,7 +58,7 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
             textShadow: '3px 3px 0px hsl(25 70% 30%), 0 0 20px hsl(35 90% 55% / 0.5)'
           }}
         >
-          CatMazeQuest
+          BoogeyMazeQuest
         </h1>
         
         <p className="text-xl font-retro text-muted-foreground mb-12 max-w-md mt-6">

@@ -25,42 +25,37 @@ export function MazeCell({
   const getCellStyle = () => {
     if (!isVisible && !isPlayer) {
       return {
-        backgroundColor: 'hsl(45 40% 85%)',
+        backgroundColor: 'hsl(30 25% 80%)',
         opacity: 1
       };
     }
 
-    const alpha = visibilityAlpha;
-
     switch (cell.type) {
       case 'wall':
         return {
-          backgroundColor: `hsla(260, 50%, 65%, ${0.3 + alpha * 0.7})`,
-          boxShadow: alpha > 0.5 ? 'inset 0 0 5px hsla(260, 50%, 75%, 0.4)' : 'none',
+          backgroundColor: 'hsl(25 45% 35%)',
+          boxShadow: 'inset 0 0 5px hsla(25, 45%, 45%, 0.4)',
           borderRadius: '4px'
         };
       case 'floor':
       case 'start':
         return {
-          backgroundColor: `hsla(45, 60%, 90%, ${alpha})`
+          backgroundColor: 'hsl(30 30% 88%)'
         };
       case 'exit':
         return {
-          backgroundColor: `hsla(140, 80%, 70%, ${alpha})`,
-          boxShadow: `0 0 ${12 * alpha}px hsla(140, 80%, 55%, ${alpha * 0.6})`,
+          backgroundColor: 'hsl(140 70% 60%)',
+          boxShadow: '0 0 12px hsla(140, 70%, 50%, 0.6)',
           borderRadius: '4px'
         };
       case 'trap':
         return {
-          backgroundColor: `hsla(30, 90%, 75%, ${alpha})`,
-          backgroundImage: cell.crumbling 
-            ? `repeating-linear-gradient(45deg, transparent, transparent 2px, hsla(30, 90%, 55%, ${alpha}) 2px, hsla(30, 90%, 55%, ${alpha}) 4px)`
-            : 'none',
+          backgroundColor: 'hsl(15 85% 70%)',
           borderRadius: '4px'
         };
       case 'bomb':
         return {
-          backgroundColor: `hsla(45, 60%, 90%, ${alpha})`
+          backgroundColor: 'hsl(30 30% 88%)'
         };
       default:
         return {};
@@ -114,18 +109,18 @@ export function MazeCell({
         </div>
       )}
 
-      {/* Player */}
+      {/* Player - Man with clipboard */}
       {isPlayer && (
         <div 
           className="absolute inset-0 flex items-center justify-center z-20"
         >
           <div 
-            className="text-xl animate-bounce-soft"
+            className="text-lg animate-bounce-soft"
             style={{
-              filter: 'drop-shadow(0 0 6px hsl(45 100% 60%))'
+              filter: 'drop-shadow(0 0 6px hsl(35 90% 55%))'
             }}
           >
-            🐱
+            🧑‍💼
           </div>
         </div>
       )}
@@ -162,15 +157,6 @@ export function MazeCell({
         </div>
       )}
 
-      {/* Vision edge glow */}
-      {isVisible && visibilityAlpha < 0.5 && visibilityAlpha > 0 && (
-        <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            boxShadow: `inset 0 0 ${cellSize / 2}px hsla(320, 85%, 55%, ${0.08 * visibilityAlpha})`
-          }}
-        />
-      )}
     </div>
   );
 }

@@ -48,7 +48,7 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
 
       <div className="relative z-10 text-center">
         {/* Title */}
-        <div className="mb-4 text-7xl animate-bounce-soft">🐱</div>
+        <div className="mb-4 text-7xl animate-bounce-soft">🧑‍💼</div>
         <h1 
           className="text-4xl md:text-5xl mb-2 text-primary tracking-wider"
           style={{

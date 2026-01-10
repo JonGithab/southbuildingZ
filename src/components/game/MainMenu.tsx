@@ -45,9 +45,8 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
         <div className="text-center">
           {/* Title */}
           <div className="mb-2 text-6xl animate-bounce-soft bg-background/50 rounded-full w-24 h-24 flex items-center justify-center shadow-lg shadow-primary/30 mx-auto">🐱</div>
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-1">
-            <span className="text-secondary">Cat</span>
-            <span className="text-primary">Maze</span>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-1 text-holographic">
+            CatMaze
           </h1>
           
           <p className="text-lg text-muted-foreground mb-8 mt-4">

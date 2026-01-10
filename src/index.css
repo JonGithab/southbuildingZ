@@ -205,6 +205,36 @@
     animation: sparkle-delayed 2.5s ease-in-out infinite;
   }
 
+  @keyframes holographic {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .text-holographic {
+    background: linear-gradient(
+      90deg,
+      hsl(330 85% 55%) 0%,
+      hsl(280 80% 60%) 15%,
+      hsl(200 85% 55%) 30%,
+      hsl(180 80% 50%) 45%,
+      hsl(140 70% 50%) 60%,
+      hsl(45 95% 55%) 75%,
+      hsl(330 85% 55%) 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: holographic 3s linear infinite;
+  }
+
   .scanlines {
     background: repeating-linear-gradient(
       0deg,

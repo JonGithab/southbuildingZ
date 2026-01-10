@@ -71,14 +71,14 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
             <Button 
               onClick={() => onStartGame(0)}
               size="lg"
-              className="text-2xl font-semibold px-14 py-8 bg-primary hover:bg-primary/80 text-primary-foreground box-glow-cognac rounded-full"
+              className="text-2xl font-semibold px-14 py-8 bg-primary hover:bg-primary/80 text-primary-foreground box-glow-cognac rounded-full transition-all duration-200 hover:scale-110 hover:-translate-y-1 active:scale-95"
             >
               Let's Play! ✨
             </Button>
             <Button 
               onClick={() => setShowLevels(true)}
               variant="outline"
-              className="text-xl font-medium border-secondary text-secondary hover:bg-secondary/20 rounded-full py-6"
+              className="text-xl font-medium border-secondary text-secondary hover:bg-secondary/20 rounded-full py-6 transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 active:scale-95"
             >
               Pick a Level 📋
             </Button>
@@ -98,7 +98,7 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
                     disabled={isLocked}
                     variant={isLocked ? "ghost" : "outline"}
                     className={`
-                      w-full text-xl font-medium py-6 flex justify-between items-center rounded-xl
+                      w-full text-xl font-medium py-6 flex justify-between items-center rounded-xl transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 active:scale-95
                       ${isLocked ? 'opacity-50 cursor-not-allowed' : 'border-primary hover:bg-primary/10'}
                     `}
                   >
@@ -117,7 +117,7 @@ export function MainMenu({ onStartGame, bestTimes, unlockedLevels }: MainMenuPro
             <Button 
               onClick={() => setShowLevels(false)}
               variant="ghost"
-              className="text-lg font-medium text-muted-foreground rounded-full"
+              className="text-lg font-medium text-muted-foreground rounded-full transition-all duration-200 hover:scale-105 active:scale-95"
             >
               ← Go Back
             </Button>
